@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Saga | Restaurant</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2 class="logo">Spice<span>Saga</span></h2>
+        <a href="#cart-section" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </header>
+
+    <section class="hero">
+        <h1>Good food. <span>Zero drama.</span></h1>
+        <p>Pick your dishes, build your cart, and place your order. No payment needed, we're not that real yet.</p>
+        <a href="#menu" class="btn">Order Now</a>
+    </section>
+
+    <main class="layout">
+
+        <!-- MENU -->
+        <section id="menu">
+            <h2 class="section-title">Our Menu</h2>
+
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterMenu('All')">All</button>
+                <button class="filter-btn" onclick="filterMenu('Starters')">Starters</button>
+                <button class="filter-btn" onclick="filterMenu('Main Course')">Main Course</button>
+                <button class="filter-btn" onclick="filterMenu('Desserts')">Desserts</button>
+                <button class="filter-btn" onclick="filterMenu('Drinks')">Drinks</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid"></div>
+        </section>
+
+        <!-- CART -->
+        <aside id="cart-section">
+            <h2 class="section-title">Your Cart</h2>
+            <div class="cart-box">
+                <div id="cart-items"></div>
+                <p class="total">Total: &#8377;<span id="cart-total">0</span></p>
+                <button class="btn full" onclick="openCheckout()">Checkout</button>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- CHECKOUT + ORDER SUMMARY -->
+    <section id="checkout" class="hidden">
+        <h2 class="section-title">Order Summary</h2>
+        <div class="checkout-box">
+            <div id="summary-items"></div>
+            <p class="total">Total: &#8377;<span id="summary-total">0</span></p>
+
+            <label for="cust-name">Name</label>
+            <input type="text" id="cust-name" placeholder="Your name">
+
+            <label for="cust-address">Delivery Address</label>
+            <input type="text" id="cust-address" placeholder="Your address">
+
+            <p class="error" id="checkout-error"></p>
+            <button class="btn full" onclick="placeOrder()">Place Order (Simulated)</button>
+        </div>
+    </section>
+
+    <!-- CONFIRMATION -->
+    <section id="confirmation" class="hidden">
+        <div class="checkout-box center">
+            <h2>Order Placed!</h2>
+            <p id="confirm-text"></p>
+            <button class="btn" onclick="newOrder()">Order Again</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Spice Saga. Made by Naman Sharma.</p>
+    </footer>
+
+    <script src="restaurant.js"></script>
+</body>
+</html>

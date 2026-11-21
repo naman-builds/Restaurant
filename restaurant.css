@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #120c08;
+    color: #f5ece4;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #ff9d2e;
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: #1e140d;
+}
+
+.logo span {
+    color: #ff9d2e;
+}
+
+.cart-link {
+    border: 2px solid #ff9d2e;
+    border-radius: 20px;
+    padding: 6px 16px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    text-align: center;
+    padding: 90px 8%;
+    background-color: #1e140d;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero h1 span {
+    color: #ff9d2e;
+}
+
+.hero p {
+    max-width: 520px;
+    margin: 15px auto 25px;
+    color: #b8a898;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-block;
+    background-color: #ff9d2e;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn.full {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ---------- LAYOUT ---------- */
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 50px 8%;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* ---------- FILTERS ---------- */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: #ff9d2e;
+    border: 2px solid #ff9d2e;
+    border-radius: 20px;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: #ff9d2e;
+    color: #000;
+}
+
+/* ---------- MENU CARDS ---------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.food-card {
+    background-color: #1e140d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-box {
+    position: relative;
+    height: 150px;
+    background-color: #2c1d12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 15px;
+}
+
+.food-info h3 {
+    font-size: 17px;
+}
+
+.food-info p {
+    color: #b8a898;
+    font-size: 14px;
+    margin: 5px 0 10px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    color: #ff9d2e;
+    font-weight: bold;
+}
+
+.add-btn {
+    background-color: #ff9d2e;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+/* ---------- CART ---------- */
+#cart-section {
+    position: sticky;
+    top: 80px;
+    align-self: start;
+}
+
+.cart-box,
+.checkout-box {
+    background-color: #1e140d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #3a2a1d;
+    font-size: 15px;
+}
+
+.qty-btn {
+    background-color: #3a2a1d;
+    color: #f5ece4;
+    border: none;
+    border-radius: 4px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ff9d2e;
+}
+
+.empty {
+    color: #b8a898;
+}
+
+/* ---------- CHECKOUT ---------- */
+#checkout,
+#confirmation {
+    padding: 0 8% 50px;
+}
+
+.checkout-box {
+    max-width: 550px;
+    margin: auto;
+}
+
+.checkout-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.checkout-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #5a4636;
+    background-color: #120c08;
+    color: #f5ece4;
+    font-size: 16px;
+}
+
+.error {
+    color: #ff5a5a;
+    font-size: 14px;
+    min-height: 20px;
+    margin-top: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e140d;
+    color: #b8a898;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 800px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    #cart-section {
+        position: static;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
